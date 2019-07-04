@@ -1002,7 +1002,8 @@ def decision_tree(name,
                   min_samples_split=None,
                   min_samples_leaf=None,
                   presort=False,
-                  random_state=None):
+                  random_state=None,
+                  max_leaf_nodes=None):
 
     def _name(msg):
         return '%s.%s_%s' % (name, 'sgd', msg)
@@ -1027,6 +1028,7 @@ def decision_tree(name,
             1, 5, 1)) if min_samples_leaf is None else min_samples_leaf,
         presort=presort,
         random_state=_random_state(_name('rstate'), random_state),
+        max_leaf_nodes=max_leaf_nodes
         )
     return rval
 
