@@ -723,6 +723,7 @@ def _trees_hp_space(
         n_estimators=None,
         max_features=None,
         max_depth=None,
+        max_leaf_nodes=None
         min_samples_split=None,
         min_samples_leaf=None,
         bootstrap=None,
@@ -739,6 +740,7 @@ def _trees_hp_space(
                       if max_features is None else max_features),
         max_depth=(_trees_max_depth(name_func('max_depth'))
                    if max_depth is None else max_depth),
+        max_leaf_nodes=max_leaf_nodes,
         min_samples_split=(_trees_min_samples_split(name_func('min_samples_split'))
                            if min_samples_split is None else min_samples_split),
         min_samples_leaf=(_trees_min_samples_leaf(name_func('min_samples_leaf'))
