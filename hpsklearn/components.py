@@ -723,7 +723,7 @@ def _trees_hp_space(
         n_estimators=None,
         max_features=None,
         max_depth=None,
-        max_leaf_nodes=None
+        max_leaf_nodes=None,
         min_samples_split=None,
         min_samples_leaf=None,
         bootstrap=None,
